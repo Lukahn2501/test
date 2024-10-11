@@ -1,15 +1,15 @@
 CREATE TABLE Persons (
     id INT PRIMARY KEY IDENTITY(1,1),
-    first_name NVARCHAR(100),
-    last_name NVARCHAR(100)
+    first_name NVARCHAR(100) NOT NULL,
+    last_name NVARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Movies (
     id INT PRIMARY KEY IDENTITY(1,1),
-    title NVARCHAR(255),
-    duration INT, -- Duration in minutes
-    genre NVARCHAR(50),
-    year INT,
+    title NVARCHAR(255) NOT NULL,
+    duration INT NOT NULL, -- Duration in minutes
+    genre NVARCHAR(50) NOT NULL,
+    year INT NOT NULL,
     synopsis NVARCHAR(MAX)
 );
 
