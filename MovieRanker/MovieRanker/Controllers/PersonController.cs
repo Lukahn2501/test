@@ -1,8 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MovieRanker.Business;
-using MovieRanker.DTO;
 using MovieRanker.Models;
+using static MovieRanker.DTO.PersonDTO;
 
 namespace MovieRanker.Controllers
 {
@@ -62,7 +61,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Create([FromBody] PersonDto personDto)
+        public async Task<IActionResult> Create([FromBody] PostPersonDto personDto)
         {
             if (personDto == null)
             {
@@ -90,7 +89,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<IActionResult> Update(int id, [FromBody] PersonDto personDto)
+        public async Task<IActionResult> Update(int id, [FromBody] PutPersonDto personDto)
         {
             if (personDto == null)
             {

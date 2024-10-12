@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieRanker.DTO;
 using MovieRanker.Models;
+using static MovieRanker.DTO.PersonDTO;
 
 namespace MovieRanker.Business
 {
@@ -56,7 +56,7 @@ namespace MovieRanker.Business
             }
         }
 
-        public async Task<PersonDto> AddOne(PersonDto personDto)
+        public async Task<PersonDto> AddOne(PostPersonDto personDto)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace MovieRanker.Business
 
         }
 
-        public async Task<PersonDto> UpdateOne(int id, PersonDto personDto)
+        public async Task<PersonDto> UpdateOne(int id, PutPersonDto personDto)
         {
             try
             {

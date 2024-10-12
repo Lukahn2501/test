@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MovieRanker.DTO;
 using MovieRanker.Models;
 using NuGet.Packaging;
-using System.IO;
+using static MovieRanker.DTO.MovieDTO;
+using static MovieRanker.DTO.PersonDTO;
 
 namespace MovieRanker.Business
 {
@@ -93,7 +93,7 @@ namespace MovieRanker.Business
             }
         }
 
-        public async Task<MovieDto> AddOne(MovieDto movieDto)
+        public async Task<MovieDto> AddOne(PostMovieDto movieDto)
         {
             try
             {
@@ -109,17 +109,17 @@ namespace MovieRanker.Business
                     Actors = new List<Person>()
                 };
 
-                // Checking data integrity and adding directors and actors to the junction tables
-                List<int>? directorIds = (movieDto.Directors != null && movieDto.Directors.Count > 0) ?
-                    movieDto.Directors.Select(d => d.Id).ToList() : null;
 
-                if (directorIds != null)
+                // Checking data integrity and adding directors and actors to the junction tables
+
+
+                if (movieDto.DirectorsIds != null)
                 {
                     List<Person>? directors = await _dbContext.Persons
-                        .Where(p => directorIds.Contains(p.Id))
+                        .Where(p => movieDto.DirectorsIds.Contains(p.Id))
                         .ToListAsync();
 
-                    if (directors.Count != movieDto.Directors!.Count)
+                    if (directors.Count != movieDto.DirectorsIds!.Count)
                     {
                         throw new Exception("One or more directors do not exist.");
                     }
@@ -127,16 +127,13 @@ namespace MovieRanker.Business
                     newMovie.Directors.AddRange(directors);
                 }
 
-                List<int>? actorIds = (movieDto.Actors != null && movieDto.Actors.Count > 0) ?
-                    movieDto.Actors.Select(a => a.Id).ToList() : null;
-
-                if (actorIds != null)
+                if (movieDto.ActorsIds != null)
                 {
                     List<Person>? actors = await _dbContext.Persons
-                        .Where(p => actorIds.Contains(p.Id))
+                        .Where(p => movieDto.ActorsIds.Contains(p.Id))
                         .ToListAsync();
 
-                    if (actors.Count != movieDto.Actors!.Count)
+                    if (actors.Count != movieDto.ActorsIds!.Count)
                     {
                         throw new Exception("One or more actors do not exist.");
                     }
@@ -176,7 +173,7 @@ namespace MovieRanker.Business
             }
         }
 
-        public async Task<MovieDto> UpdateOne(int id, MovieDto movieDto)
+        public async Task<MovieDto> UpdateOne(int id, PutMovieDto movieDto)
         {
             try
             {
@@ -198,16 +195,14 @@ namespace MovieRanker.Business
                 existingMovie.Actors.Clear();
 
                 // Checking data integrity and replacing the existing directors and actors
-                List<int>? directorIds = (movieDto.Directors != null && movieDto.Directors.Count > 0) ?
-                    movieDto.Directors.Select(d => d.Id).ToList() : null;
 
-                if (directorIds != null)
+                if (movieDto.DirectorsIds != null)
                 {
                     List<Person>? directors = await _dbContext.Persons
-                        .Where(p => directorIds.Contains(p.Id))
+                        .Where(p => movieDto.DirectorsIds.Contains(p.Id))
                         .ToListAsync();
 
-                    if (directors.Count != movieDto.Directors!.Count)
+                    if (directors.Count != movieDto.DirectorsIds!.Count)
                     {
                         throw new Exception("One or more directors do not exist.");
                     }
@@ -215,16 +210,13 @@ namespace MovieRanker.Business
                     existingMovie.Directors = directors;
                 }
 
-                List<int>? actorIds = (movieDto.Actors != null && movieDto.Actors.Count > 0) ?
-                    movieDto.Actors.Select(a => a.Id).ToList() : null;
-
-                if (actorIds != null)
+                if (movieDto.ActorsIds != null)
                 {
                     List<Person>? actors = await _dbContext.Persons
-                        .Where(p => actorIds.Contains(p.Id))
+                        .Where(p => movieDto.ActorsIds.Contains(p.Id))
                         .ToListAsync();
 
-                    if (actors.Count != movieDto.Actors!.Count)
+                    if (actors.Count != movieDto.ActorsIds!.Count)
                     {
                         throw new Exception("One or more actors do not exist.");
                     }
