@@ -93,7 +93,7 @@ namespace MovieRanker.Business
                 Person? existingPerson = await _dbContext.Persons.FirstOrDefaultAsync(p => p.Id == id) ?? throw new KeyNotFoundException($"Person with ID {id} not found.");
                 existingPerson.FirstName = personDto.FirstName;
                 existingPerson.LastName = personDto.LastName;
-                
+
                 await _dbContext.SaveChangesAsync();
 
                 //return the updated Person DTO

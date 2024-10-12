@@ -302,7 +302,7 @@ namespace MovieRanker.Business
 
                 double currentRating = movieEntity.Rating ?? 0;
                 int currentRatingCount = movieEntity.RatingCount ?? 0;
-                
+
                 movieEntity.Rating = (currentRating * currentRatingCount + rating) / (currentRatingCount + 1);
                 movieEntity.RatingCount = currentRatingCount + 1;
 
@@ -332,7 +332,8 @@ namespace MovieRanker.Business
                     RatingCount = movieEntity.RatingCount
                 };
             }
-            catch { 
+            catch
+            {
                 throw;
             }
         }

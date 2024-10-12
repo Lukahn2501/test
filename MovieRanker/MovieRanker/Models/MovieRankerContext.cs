@@ -1,27 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace MovieRanker.Models;
 
 public partial class MovieRankerContext : DbContext
 {
-    public MovieRankerContext()
+    private readonly IConfiguration _configuration;
+
+    public MovieRankerContext(IConfiguration configuration)
     {
+        _configuration = configuration;
     }
 
-    public MovieRankerContext(DbContextOptions<MovieRankerContext> options)
+    public MovieRankerContext(DbContextOptions<MovieRankerContext> options, IConfiguration configuration)
         : base(options)
     {
+        _configuration = configuration;
     }
 
     public virtual DbSet<Movie> Movies { get; set; }
-
     public virtual DbSet<Person> Persons { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=DESKTOP-1T6TSP0\\SQLEXPRESS;Database=MovieRanker;Trusted_Connection=True;Encrypt=False");
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            optionsBuilder.UseSqlServer(_configuration.GetConnectionString("SqlServer"));
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

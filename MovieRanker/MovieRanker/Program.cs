@@ -1,23 +1,28 @@
 using Microsoft.EntityFrameworkCore;
+using MovieRanker.Business;
 using MovieRanker.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Ajouter les services au conteneur.
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<MovieRankerContext>(
- o => o.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+// Configurer la chaîne de connexion et enregistrer le contexte de la base de données
+builder.Services.AddDbContext<MovieRankerContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+
+// Enregistrer les services business
+builder.Services.AddScoped<PersonBusiness>();
+builder.Services.AddScoped<MovieBusiness>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configurer le pipeline HTTP.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
