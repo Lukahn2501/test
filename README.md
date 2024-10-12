@@ -18,7 +18,3 @@ Ouvrir la solution
 Scaffold-DbContext “Server=DESKTOP-1T6TSP0\SQLEXPRESS;Database=MovieRanker;Trusted_Connection=True; Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 ```
 - Run
-
-## TODO
-- clean les chaînes de connexion
-- clarifier le body PUT/POST (présence de l'id, inutilité du nom prénom pour le post movie)
