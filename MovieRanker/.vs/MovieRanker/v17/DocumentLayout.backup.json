@@ -7,32 +7,24 @@
       "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\controllers\\personcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\models\\movierankercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\models\\movierankercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\business\\personbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\business\\personbusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\models\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\controllers\\moviecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\models\\movie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\business\\moviebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\business\\moviebusiness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\dto\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\dto\\dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\dto\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\dto\\moviedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|c:\\code\\test\\movieranker\\movieranker\\dto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3150EA00-6DAF-4569-91EC-655EDA0E62A9}|MovieRanker\\MovieRanker.csproj|solutionrelative:movieranker\\dto\\persondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,103 +44,74 @@
               "RelativeDocumentMoniker": "MovieRanker\\Controllers\\PersonController.cs",
               "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Controllers\\PersonController.cs",
               "RelativeToolTip": "MovieRanker\\Controllers\\PersonController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwFsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:54:45.752Z",
+              "WhenOpened": "2024-10-12T11:11:25.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Movie.cs",
-              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\Movie.cs",
-              "RelativeDocumentMoniker": "MovieRanker\\Models\\Movie.cs",
-              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\Movie.cs",
-              "RelativeToolTip": "MovieRanker\\Models\\Movie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:32:47.852Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "PersonBusiness.cs",
               "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Business\\PersonBusiness.cs",
               "RelativeDocumentMoniker": "MovieRanker\\Business\\PersonBusiness.cs",
               "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Business\\PersonBusiness.cs",
               "RelativeToolTip": "MovieRanker\\Business\\PersonBusiness.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAcwFcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T16:31:00.277Z",
+              "WhenOpened": "2024-10-12T11:11:01.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MovieRankerContext.cs",
-              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\MovieRankerContext.cs",
-              "RelativeDocumentMoniker": "MovieRanker\\Models\\MovieRankerContext.cs",
-              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\MovieRankerContext.cs",
-              "RelativeToolTip": "MovieRanker\\Models\\MovieRankerContext.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwCwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:31:56.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Program.cs",
-              "RelativeDocumentMoniker": "MovieRanker\\Program.cs",
-              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Program.cs",
-              "RelativeToolTip": "MovieRanker\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:31:43.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\Person.cs",
-              "RelativeDocumentMoniker": "MovieRanker\\Models\\Person.cs",
-              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Models\\Person.cs",
-              "RelativeToolTip": "MovieRanker\\Models\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:33:01.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DTO.cs",
-              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\DTO.cs",
-              "RelativeDocumentMoniker": "MovieRanker\\DTO\\DTO.cs",
-              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\DTO.cs",
-              "RelativeToolTip": "MovieRanker\\DTO\\DTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T15:02:47.924Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 202,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MovieController.cs",
               "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Controllers\\MovieController.cs",
               "RelativeDocumentMoniker": "MovieRanker\\Controllers\\MovieController.cs",
               "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Controllers\\MovieController.cs",
               "RelativeToolTip": "MovieRanker\\Controllers\\MovieController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T17:07:28.824Z",
+              "WhenOpened": "2024-10-12T11:10:08.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MovieBusiness.cs",
+              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\Business\\MovieBusiness.cs",
+              "RelativeDocumentMoniker": "MovieRanker\\Business\\MovieBusiness.cs",
+              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\Business\\MovieBusiness.cs",
+              "RelativeToolTip": "MovieRanker\\Business\\MovieBusiness.cs",
+              "ViewState": "AgIAAPoAAAAAAAAAAAAmwN8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T11:05:18.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PersonDTO.cs",
+              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\PersonDTO.cs",
+              "RelativeDocumentMoniker": "MovieRanker\\DTO\\PersonDTO.cs",
+              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\PersonDTO.cs",
+              "RelativeToolTip": "MovieRanker\\DTO\\PersonDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T11:02:41.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieDTO.cs",
+              "DocumentMoniker": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\MovieDTO.cs",
+              "RelativeDocumentMoniker": "MovieRanker\\DTO\\MovieDTO.cs",
+              "ToolTip": "C:\\code\\test\\MovieRanker\\MovieRanker\\DTO\\MovieDTO.cs",
+              "RelativeToolTip": "MovieRanker\\DTO\\MovieDTO.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAYwB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T11:01:52.82Z",
               "EditorCaption": ""
             }
           ]

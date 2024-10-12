@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[MovieRanker.DTO.MovieDto, MovieRanker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[MovieRanker.DTO.MovieDTO\u002BMovieDto, MovieRanker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -43,13 +43,13 @@
     "Parameters": [
       {
         "Name": "movieDto",
-        "Type": "MovieRanker.DTO.MovieDto",
+        "Type": "MovieRanker.DTO.MovieDTO\u002BPostMovieDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.MovieDto",
+        "Type": "MovieRanker.DTO.MovieDTO\u002BMovieDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -89,7 +89,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.MovieDto",
+        "Type": "MovieRanker.DTO.MovieDTO\u002BMovieDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -128,13 +128,13 @@
       },
       {
         "Name": "movieDto",
-        "Type": "MovieRanker.DTO.MovieDto",
+        "Type": "MovieRanker.DTO.MovieDTO\u002BPutMovieDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.MovieDto",
+        "Type": "MovieRanker.DTO.MovieDTO\u002BMovieDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -213,7 +213,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[MovieRanker.DTO.PersonDto, MovieRanker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[MovieRanker.DTO.PersonDTO\u002BPersonDto, MovieRanker, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -247,13 +247,13 @@
     "Parameters": [
       {
         "Name": "personDto",
-        "Type": "MovieRanker.DTO.PersonDto",
+        "Type": "MovieRanker.DTO.PersonDTO\u002BPostPersonDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.PersonDto",
+        "Type": "MovieRanker.DTO.PersonDTO\u002BPersonDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -293,7 +293,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.PersonDto",
+        "Type": "MovieRanker.DTO.PersonDTO\u002BPersonDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -332,13 +332,13 @@
       },
       {
         "Name": "personDto",
-        "Type": "MovieRanker.DTO.PersonDto",
+        "Type": "MovieRanker.DTO.PersonDTO\u002BPutPersonDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "MovieRanker.DTO.PersonDto",
+        "Type": "MovieRanker.DTO.PersonDTO\u002BPersonDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
