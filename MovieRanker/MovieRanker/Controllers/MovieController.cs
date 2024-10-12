@@ -132,5 +132,33 @@ namespace MovieRanker.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
+        // PUT: api/movies/{id}/rate
+        [HttpPut("{id}/rate")]
+        [ProducesResponseType(typeof(MovieDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<IActionResult> Rate(int id, [FromBody] int rating)
+        {
+            if (rating < 1 || rating > 5)
+            {
+                return BadRequest("Rating must be between 1 and 5.");
+            }
+
+            try
+            {
+                MovieDto updatedMovie = await _movieBusiness.RateOne(id, rating);
+                return Ok(updatedMovie);
+            }
+            catch (KeyNotFoundException)
+            {
+                return NotFound($"Movie with ID {id} not found.");
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
     }
 }

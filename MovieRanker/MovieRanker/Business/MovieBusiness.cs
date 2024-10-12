@@ -280,5 +280,61 @@ namespace MovieRanker.Business
                 throw;
             }
         }
+
+        public async Task<MovieDto> RateOne(int id, int rating)
+        {
+            try
+            {
+                if (rating < 1 || rating > 5)
+                {
+                    throw new Exception("Rating must be between 1 and 5.");
+                }
+
+                Movie? movieEntity = await _dbContext.Movies
+                    .Include(movie => movie.Directors)
+                    .Include(movie => movie.Actors)
+                    .FirstOrDefaultAsync(movie => movie.Id == id);
+
+                if (movieEntity == null)
+                {
+                    throw new KeyNotFoundException($"Movie with ID {id} not found.");
+                }
+
+                double currentRating = movieEntity.Rating ?? 0;
+                int currentRatingCount = movieEntity.RatingCount ?? 0;
+                
+                movieEntity.Rating = (currentRating * currentRatingCount + rating) / (currentRatingCount + 1);
+                movieEntity.RatingCount = currentRatingCount + 1;
+
+                await _dbContext.SaveChangesAsync();
+
+                return new MovieDto
+                {
+                    Id = movieEntity.Id,
+                    Title = movieEntity.Title,
+                    Duration = movieEntity.Duration,
+                    Genre = movieEntity.Genre,
+                    Year = movieEntity.Year,
+                    Synopsis = movieEntity.Synopsis,
+                    Directors = movieEntity.Directors.Select(d => new PersonDto
+                    {
+                        Id = d.Id,
+                        FirstName = d.FirstName,
+                        LastName = d.LastName
+                    }).ToList(),
+                    Actors = movieEntity.Actors.Select(a => new PersonDto
+                    {
+                        Id = a.Id,
+                        FirstName = a.FirstName,
+                        LastName = a.LastName
+                    }).ToList(),
+                    Rating = movieEntity.Rating,
+                    RatingCount = movieEntity.RatingCount
+                };
+            }
+            catch { 
+                throw;
+            }
+        }
     }
 }

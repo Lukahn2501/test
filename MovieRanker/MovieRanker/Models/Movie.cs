@@ -17,6 +17,10 @@ public partial class Movie
 
     public string? Synopsis { get; set; }
 
+    public double? Rating { get; set; }
+
+    public int? RatingCount { get; set; }
+
     public virtual ICollection<Person> Actors { get; set; } = new List<Person>();
 
     public virtual ICollection<Person> Directors { get; set; } = new List<Person>();
