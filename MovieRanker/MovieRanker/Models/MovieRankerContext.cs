@@ -43,7 +43,8 @@ public partial class MovieRankerContext : DbContext
             entity.Property(e => e.Rating).HasColumnName("rating");
             entity.Property(e => e.RatingCount)
                 .HasDefaultValue(0)
-                .HasColumnName("rating_count");
+                .HasColumnName("rating_count")
+                .IsRequired();
             entity.Property(e => e.Synopsis).HasColumnName("synopsis");
             entity.Property(e => e.Title)
                 .HasMaxLength(255)

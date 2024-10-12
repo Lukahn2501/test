@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MovieRanker.Models;
 
@@ -11,9 +12,11 @@ using MovieRanker.Models;
 namespace MovieRanker.Migrations
 {
     [DbContext(typeof(MovieRankerContext))]
-    partial class MovieRankerContextModelSnapshot : ModelSnapshot
+    [Migration("20241012134444_SeedRatings")]
+    partial class SeedRatings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -81,7 +84,7 @@ namespace MovieRanker.Migrations
                         .HasColumnType("float")
                         .HasColumnName("rating");
 
-                    b.Property<int>("RatingCount")
+                    b.Property<int?>("RatingCount")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasDefaultValue(0)

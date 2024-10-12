@@ -19,7 +19,7 @@ public partial class Movie
 
     public double? Rating { get; set; }
 
-    public int? RatingCount { get; set; }
+    public int RatingCount { get; set; } = 0;
 
     public virtual ICollection<Person> Actors { get; set; } = new List<Person>();
 
