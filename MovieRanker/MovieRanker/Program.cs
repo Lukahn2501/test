@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieRanker.Business;
 using MovieRanker.Models;
@@ -13,11 +14,21 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MovieRankerContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
 // Enregistrer les services business
 builder.Services.AddScoped<PersonBusiness>();
 builder.Services.AddScoped<MovieBusiness>();
 
 var app = builder.Build();
+
+app.MapIdentityApi<IdentityUser>();
 
 // Configurer le pipeline HTTP.
 if (app.Environment.IsDevelopment())

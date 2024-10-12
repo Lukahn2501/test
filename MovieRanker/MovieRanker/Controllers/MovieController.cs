@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MovieRanker.Business;
 using MovieRanker.Models;
 using static MovieRanker.DTO.MovieDTO;
@@ -7,6 +8,7 @@ namespace MovieRanker.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class MovieController : ControllerBase
     {
         private readonly MovieBusiness _movieBusiness;
