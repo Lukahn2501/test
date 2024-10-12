@@ -1,1 +1,5 @@
-MovieRanker/.vs/
+MovieRanker/.vs/**
+MovieRanker/MovieRanker/bin/
+MovieRanker/MovieRanker/bin/**
+MovieRanker/MovieRanker/obj/
+MovieRanker/MovieRanker/obj/**
