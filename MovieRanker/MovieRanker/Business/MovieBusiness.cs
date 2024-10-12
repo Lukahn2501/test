@@ -41,7 +41,9 @@ namespace MovieRanker.Business
                             Id = a.Id,
                             FirstName = a.FirstName,
                             LastName = a.LastName
-                        }).ToList()
+                        }).ToList(),
+                        Rating = movie.Rating,
+                        RatingCount = movie.RatingCount
                     })
                     .ToListAsync();
             }
@@ -84,7 +86,9 @@ namespace MovieRanker.Business
                         Id = a.Id,
                         FirstName = a.FirstName,
                         LastName = a.LastName
-                    }).ToList()
+                    }).ToList(),
+                    Rating = movieEntity.Rating,
+                    RatingCount = movieEntity.RatingCount,
                 };
             }
             catch
@@ -106,7 +110,7 @@ namespace MovieRanker.Business
                     Year = movieDto.Year,
                     Synopsis = movieDto.Synopsis ?? "",
                     Directors = new List<Person>(),
-                    Actors = new List<Person>()
+                    Actors = new List<Person>(),
                 };
 
 
@@ -164,7 +168,9 @@ namespace MovieRanker.Business
                         Id = a.Id,
                         FirstName = a.FirstName,
                         LastName = a.LastName
-                    }).ToList()
+                    }).ToList(),
+                    Rating = newMovie.Rating,
+                    RatingCount = newMovie.RatingCount,
                 };
             }
             catch
@@ -247,7 +253,9 @@ namespace MovieRanker.Business
                         Id = a.Id,
                         FirstName = a.FirstName,
                         LastName = a.LastName
-                    }).ToList()
+                    }).ToList(),
+                    Rating = existingMovie.Rating,
+                    RatingCount = existingMovie.RatingCount,
                 };
             }
             catch
@@ -301,7 +309,7 @@ namespace MovieRanker.Business
                 }
 
                 double currentRating = movieEntity.Rating ?? 0;
-                int currentRatingCount = movieEntity.RatingCount ?? 0;
+                int currentRatingCount = movieEntity.RatingCount;
 
                 movieEntity.Rating = (currentRating * currentRatingCount + rating) / (currentRatingCount + 1);
                 movieEntity.RatingCount = currentRatingCount + 1;

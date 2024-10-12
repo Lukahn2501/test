@@ -15,7 +15,7 @@ namespace MovieRanker.DTO
             public List<PersonDto>? Directors { get; set; }
             public List<PersonDto>? Actors { get; set; }
             public double? Rating { get; set; }
-            public int? RatingCount { get; set; }
+            public int RatingCount { get; set; }
         }
 
         public class PostMovieDto()
