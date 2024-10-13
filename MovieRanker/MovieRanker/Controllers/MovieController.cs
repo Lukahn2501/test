@@ -8,7 +8,7 @@ namespace MovieRanker.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    [Authorize(Roles ="Admin")]
     public class MovieController : ControllerBase
     {
         private readonly MovieBusiness _movieBusiness;
