@@ -1,4 +1,3 @@
-// File: Controllers/RolesController.cs
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -27,28 +26,29 @@ namespace MovieRanker.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> AddOrReplaceUserRole([FromBody] AddRoleToUserModel model)
         {
-            var user = await _userManager.FindByNameAsync(model.Username);
+            IdentityUser? user = await _userManager.FindByNameAsync(model.Username);
             if (user == null)
             {
                 return NotFound($"User '{model.Username}' not found.");
             }
 
-            if (!await _roleManager.RoleExistsAsync(model.Role))
+            bool roleExists = await _roleManager.RoleExistsAsync(model.Role);
+            if (!roleExists)
             {
                 return BadRequest($"Role '{model.Role}' does not exist.");
             }
 
-            var currentRoles = await _userManager.GetRolesAsync(user);
+            IList<string> currentRoles = await _userManager.GetRolesAsync(user);
             if (currentRoles.Count > 0)
             {
-                var removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
+                IdentityResult removeResult = await _userManager.RemoveFromRolesAsync(user, currentRoles);
                 if (!removeResult.Succeeded)
                 {
                     return BadRequest("Failed to remove existing roles.");
                 }
             }
 
-            var addResult = await _userManager.AddToRoleAsync(user, model.Role);
+            IdentityResult addResult = await _userManager.AddToRoleAsync(user, model.Role);
             if (addResult.Succeeded)
             {
                 return Ok($"Role '{model.Role}' assigned to user '{model.Username}'.");
@@ -58,12 +58,9 @@ namespace MovieRanker.Controllers
         }
     }
 
-
     public class AddRoleToUserModel
     {
         public required string Username { get; set; }
         public required string Role { get; set; }
     }
 }
-
-

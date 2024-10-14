@@ -47,14 +47,14 @@ app.UseAuthorization();
 app.MapControllers();
 
 #region Seed Data (FOR TESTING PURPOSES ONLY)
-using (var scope = app.Services.CreateScope())
+using (IServiceScope scope = app.Services.CreateScope())
 {
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+    RoleManager<IdentityRole> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    UserManager<IdentityUser> userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-    var roles = new[] { "Admin", "Contributor", "Spectator" };
+    string[] roles = new[] { "Admin", "Contributor", "Spectator" };
 
-    foreach (var role in roles)
+    foreach (string role in roles)
     {
         if (!await roleManager.RoleExistsAsync(role))
         {
@@ -62,7 +62,7 @@ using (var scope = app.Services.CreateScope())
         }
     }
 
-    var userTest = await userManager.FindByNameAsync("cont@cont.cont");
+    IdentityUser? userTest = await userManager.FindByNameAsync("cont@cont.cont");
     await userManager.RemoveFromRoleAsync(userTest!, "Admin");
 
     var users = new[]
@@ -72,13 +72,13 @@ using (var scope = app.Services.CreateScope())
         new { Username = "spec@spec.spec", Password = "specP@ssw0rd", Role = "Spectator"  }
     };
 
-    foreach(var userSeed in users)
+    foreach (var userSeed in users)
     {
-        var user = await userManager.FindByNameAsync(userSeed.Username);
+        IdentityUser? user = await userManager.FindByNameAsync(userSeed.Username);
         if (user == null)
         {
             user = new IdentityUser { UserName = userSeed.Username, Email = userSeed.Username };
-            var result = await userManager.CreateAsync(user, userSeed.Password);
+            IdentityResult result = await userManager.CreateAsync(user, userSeed.Password);
             if (result.Succeeded)
             {
                 await userManager.AddToRoleAsync(user, userSeed.Role);

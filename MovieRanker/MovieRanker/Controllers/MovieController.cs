@@ -8,7 +8,7 @@ namespace MovieRanker.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles ="Admin")]
+    [Authorize]
     public class MovieController : ControllerBase
     {
         private readonly MovieBusiness _movieBusiness;
@@ -63,6 +63,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(MovieDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles= "Admin, Contributor")]
         public async Task<IActionResult> Create([FromBody] PostMovieDto movieDto)
         {
             if (movieDto == null)
@@ -91,6 +92,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles = "Admin, Contributor")]
         public async Task<IActionResult> Update(int id, [FromBody] PutMovieDto movieDto)
         {
             if (movieDto == null)
@@ -118,6 +120,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             try

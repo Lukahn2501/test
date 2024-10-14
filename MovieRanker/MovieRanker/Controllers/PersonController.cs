@@ -63,6 +63,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles = "Admin, Contributor")]
         public async Task<IActionResult> Create([FromBody] PostPersonDto personDto)
         {
             if (personDto == null)
@@ -91,6 +92,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles = "Admin, Contributor")]
         public async Task<IActionResult> Update(int id, [FromBody] PutPersonDto personDto)
         {
             if (personDto == null)
@@ -118,6 +120,7 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             try
