@@ -1,7 +1,9 @@
 # ADR_1 - 10/10/2024 - API Structure
 
 _Status_: Accepted
+
 _Context_: What structure should the API take, given the small scale of the project. Should we decrease the abstraction level at which we operate?
+
 _Decision_: No. Since this project is also mean to showcase a 
 
 _Consequences_: The API will use a standard three layers architecture.

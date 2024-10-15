@@ -63,3 +63,13 @@ Valid body
   "lastName": "Lamar"
 }
 ```
+
+## Roles
+
+### PUT
+```json
+{
+  "username": "cont@cont.cont",
+  "role": "Admin"
+}
+```
