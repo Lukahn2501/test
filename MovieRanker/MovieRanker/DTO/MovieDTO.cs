@@ -31,7 +31,6 @@ namespace MovieRanker.DTO
 
         public class PutMovieDto()
         {
-            public required int Id { get; set; }
             public required string Title { get; set; }
             public required int Duration { get; set; }
             public required string Genre { get; set; }

@@ -23,6 +23,8 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(List<PersonDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> Get()
         {
             try
@@ -41,6 +43,8 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<IActionResult> GetById(int id)
         {
             try
@@ -63,6 +67,8 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(PersonDto), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Authorize(Roles = "Admin, Contributor")]
         public async Task<IActionResult> Create([FromBody] PostPersonDto personDto)
         {
@@ -92,6 +98,8 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Authorize(Roles = "Admin, Contributor")]
         public async Task<IActionResult> Update(int id, [FromBody] PutPersonDto personDto)
         {

@@ -1,5 +1,27 @@
 # API
 
+## Identity
+
+### POST /login (useCookies: true)
+```json
+{ //Admin
+  "email": "admin@admin.admin",
+  "password": "adminP@ssw0rd"
+}
+```
+```json
+{ //Contributor
+  "email": "cont@cont.cont",
+  "password": "contP@ssw0rd"
+}
+```
+```json
+{ //Spectator
+  "email": "spec@spec.spec",
+  "password": "specP@ssw0rd"
+}
+```
+
 ## Movies
 
 ### POST
@@ -34,7 +56,6 @@ Invalid Body
 Valid body
 ```json
 {
-    "id": 13, //Paste actual id here
     "title": "Jurassic Park",
     "duration": 127,
     "genre": "Adventure",
@@ -44,6 +65,11 @@ Valid body
     "actorsIds": [1,7]
 }
 ```
+
+### PUT /rate
+```json
+  3 //from 1 to 5
+``` 
 
 ## Persons
 
@@ -58,7 +84,6 @@ Valid body
 ### PUT
 ```json
 {
-  "id": "", // Put actual id here
   "firstName": "Kendrick",
   "lastName": "Lamar"
 }

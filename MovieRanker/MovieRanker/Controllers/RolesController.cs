@@ -8,6 +8,7 @@ namespace MovieRanker.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [Authorize(Roles = "Admin")]
+    
     public class RolesController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -23,6 +24,9 @@ namespace MovieRanker.Controllers
         [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(typeof(string), 400)]
         [ProducesResponseType(typeof(string), 404)]
+        [ProducesResponseType(typeof(string), 200)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [Produces("application/json")]
         public async Task<IActionResult> AddOrReplaceUserRole([FromBody] AddRoleToUserModel model)
         {
