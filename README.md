@@ -13,6 +13,7 @@ Ouvrir la solution
 - Appliquer les migrations via
 > .NET Core CLI
 `dotnet ef database update`
+
 >Gestionnaire de paquets
 `Update-Datase`
 - Run (change the targer to IIS Express)
@@ -20,5 +21,7 @@ Ouvrir la solution
 ## Architecture Decision Records
 
 [1 - API Structure](./ADRs/1_api_structure.md)
+
 [2 - var vs Explicite Types](./ADRs/2_var_vs_types.md)
+
 [3 - Rating Deletion](./ADRs/3_rating_deletion.md)
